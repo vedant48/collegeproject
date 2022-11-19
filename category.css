@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Netflix Sans', sans-serif;
+  background: #212129;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: auto;
+}
+::-webkit-scrollbar{
+  width: 7px;
+  background-color: #111;
+}
+::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  color: #edf0f1;
+  padding: 20px;
+  background: #101014;
+  border-radius: 30px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #FFF;
+  opacity: 0.8;
+  text-decoration: none;
+  padding-top: 10px;
+  text-align: center;
+}
+li:hover {
+  color: #edf0f1;
+  font-size: 45px;
+  transition: all .3s;
+}
+
+#mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(357.3deg, #000000 2.16%, rgba(226, 30, 30, 0) 55.61%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}

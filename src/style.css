@@ -1,0 +1,350 @@
+body {
+  background-color: #181818;
+  background-image: url(https://pickamovieforme.b-cdn.net/wp-content/uploads/2020/06/bg.jpg);
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400");
+
+/* navstart */
+/* ================= BASE ==================== */
+ul li {
+  margin: 10px 0px;
+  font-size: 20px;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: 'Lato', sans-serif;
+  list-style-type:circle;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.bx {
+  font-size: 2.5rem;
+}
+.container {
+  padding: 0 2rem;
+}
+
+/* ================= HEADER ================ */
+
+
+
+#textp {
+  color: #fff;
+  font-weight: 100;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px #fff;
+  text-align: center;
+  margin-top: 30px;
+  font-family: Josefin Sans;
+}
+
+#textMain {
+  padding: 50px 150px 30px 150px;
+  background-color: rgba(24,24,24,.8);
+  color: white;
+  margin-top: 100px;
+}
+
+#textMain h2 {
+  margin: 30px 0px;
+  font-size: 30px;
+  font-weight: 200;
+  font-family: Josefin Sans;
+}
+
+#textMain p {
+  font-size: 25px;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: 'Lato', sans-serif;
+}
+
+footer {
+  color: white;
+  background-color: #181818;
+  padding: 10px 250px;
+  font-family: Josefin Sans;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px 2px #909090;
+  border-top: 2px solid white;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #101014;
+  opacity: 0.8;
+  box-shadow: 0 0 10px 2px #909090;
+  border-bottom: 2px solid white;
+  padding: 1rem 2rem;
+}
+.company-logo {
+  font-size: 2.5rem;
+  background: #fff;
+  font-family: Josefin Sans;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-items {
+  display: flex;
+}
+.nav-item {
+  margin: 0 2rem;
+}
+.nav-link {
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  position: relative;
+  background: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-link:hover{
+  background: #FE5F55;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-link::before {
+  content: "";
+  background: gold;
+  width: 100%;
+  height: 0.05rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 150ms;
+}
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.menu-toggle {
+  display: none;
+}
+.bx-menu,
+.bx-x {
+  cursor: pointer;
+  background: -webkit-linear-gradient(
+    120deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: none !important;
+}
+
+/* navend  */
+
+/* search start */
+
+.search-wrapper {
+  position: absolute;
+  top: 300px;
+  left:37%;
+  
+}
+.search-wrapper .input-holder .search-icon {
+  width: 50px;
+  height:50px;
+  margin-left: 10px;
+  border-radius: 30px;
+  border:none;
+  background: #FFF;
+  padding:0px;
+  outline:none;
+  position: relative;
+  z-index: 2;
+  float:right;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-wrapper .input-holder .search-icon span {
+  width:22px;
+  height:22px;
+  display: inline-block;
+  vertical-align: middle;
+  position:relative;
+  transform: rotatez(315deg);
+  transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+}
+.search-wrapper.active .input-holder .search-icon span {
+  transform: rotate(-45deg);
+}
+
+.search-wrapper .input-holder .search-icon span::before, .search-wrapper .input-holder .search-icon span::after {
+  position: absolute; 
+  content:'';
+}
+.search-wrapper .input-holder .search-icon span::before {
+  width: 4px;
+  height: 11px;
+  left: 9px;
+  top: 18px;
+  border-radius: 2px;
+  background: #FE5F55;
+}
+.search-wrapper .input-holder .search-icon span::after {
+  width: 14px;
+  height: 14px;
+  left: 0px;
+  top: 0px;
+  border-radius: 16px;
+  border: 4px solid #FE5F55;
+}
+
+/* movie start */
+
+.main {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.movieDiv {
+  width: 220px;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 0.2px 4px 5px rgb(0 0 0 / 10%);
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.movieDiv img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.movieDiv:hover img {
+  transform: scale(1.1);
+  mask-image: linear-gradient(to bottom, rgba(54, 13, 150, 0.8), rgba(150, 8, 8, 0.2));
+
+}
+
+.movieDiv:hover {
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  transform: scale(1.09);
+  opacity: 1;
+}
+
+ul li ul {
+	background: #101014;
+	visibility: hidden;
+  opacity: 0;
+  width: 170px;
+  padding: 10px;
+	position: absolute;
+  transition: all 0.5s ease;
+  display: none;
+  z-index: 2;
+  border-radius: 30px;
+}
+ul li ul a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: all 0.5s ease;
+}
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+	clear: both;
+  width: 100%;
+}
+
+.movieInfo {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.movieInfo h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.movieInfo :nth-child(5) {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-color: #0000ee;
+}
+
+.movieInfo span {
+  background-color: #fff;
+  color: #000;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* loader */
+        #loader {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+          
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+          
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }

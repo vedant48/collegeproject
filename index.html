@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.min.css" />
+  <title>MovieMint</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <header>
+    <div class="company-logo">MovieHint</div>
+    <nav class="navbar">
+      <ul class="nav-items">
+        <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CATEGORY</a>
+          <ul class="dropdown">
+            <li><a class="nav-link" href="category.html">Movie</a></li>
+            <li><a class="nav-link" href="categorytv.html">TV Series</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="bx bx-menu"></i>
+      <i class="bx bx-x"></i>
+    </div>
+  </header>
+  <!-- navbar end -->
+
+  <!-- text -->
+  <div style="padding: 30px;">
+    <h1 style="
+        color: #fff;
+        font-size: 50px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 0 5px #fff;
+        text-align: center;
+        margin-top: 30px;
+        font-family: Josefin Sans;
+      ">
+    Movie Recommendation System
+  </h1>
+  <p id="textp">You struggle to choose from among thousands of streaming movies?</p>
+  <p style="margin-top: 10px;" id="textp">Just enter a url and see the magic</p>
+  </div>
+
+  <!-- text end -->
+
+  <!-- search url  -->
+  <div class="search-wrapper">
+    <div class="input-holder">
+      <input class="search-input" id="autoComplete" type="search" dir="ltr" spellcheck="false" autocorrect="off"
+        autocomplete="off" autocapitalize="off" />
+      <button class="search-icon" id="searchBtn"><span></span></button>
+    </div>
+  </div>
+  <!-- search url end -->
+
+  <!-- movielist start -->
+  <div class="main"></div>
+  <!-- movielist end -->
+
+
+  <div id="loader" class="center"></div>
+
+  <section style="margin-top: 330px;">
+    <div id="textMain">
+      <h2>The Correct Way To Select A Film</h2>
+      <p style="margin: 0 0 15px;">While watching movies is enjoyable, choose which one to watch next may be stressful. Is it common to you to spend half an hour scrolling through Netflix, viewing trailers on YouTube, searching up IMDb ratings, and yet being unable to pick what to watch?</p>
+      <p style="margin: 0 0 15px;">We've got a solution for you. We have developed a movie recommendation system to assist you in finding the greatest movies to watch. Simply input a movie URL and our algorithm will propose comparable films to you.</p>
+      <p style="margin: 0 0 15px;">To propose movies, we used Google scrape results. This method yields the finest recommendations. As a result, we provide you with the name of the movie, year of release, accessible streaming, and direct viewing of the YouTube trailer.</p>
+      <p style="margin: 0 0 15px;">So, what are you holding out for? Enter a movie URL and leave the rest to our system.</p>
+      <p  style="margin: 0 0 15px;">We hope you enjoy our movie recommendation system. If you have any questions or suggestions, please contact us.</p>
+      
+      <h2>What Sets This Movie Recommendation Engine Apart?</h2>
+      <ul style="margin:0px 30px;">
+            <li>all listed movies are hand-picked and manually tagged by film connoisseurs ensuring high quality recommendations</li>
+            <li>even your mood and the occasion are considered in the movie suggestion</li>
+            <li>NEW: you can now watch movie trailers directly on our website</li>
+            <li>you get only one recommendation at a time, so there isn't a hard decision again (there is a button to get the next recommendation)</li>
+            <li>new movies are added consistently</li>
+            <li>special recommendations for movie dates: these movies are perfect for dates & will help you to make a good impression on your crush</li>
+      </ul>
+
+      <h2 style="font-size: 25px;">Give it a try! If you like it, please share it! If not, we highly appreciate any kind of feedback.</h2>
+
+    </div>
+  </section>
+
+  <footer>
+    <div id="copyright" class="clr" role="contentinfo">
+      © Copyright 2022 - MovieHint.com			
+    </div>
+  </footer>
+
+
+  <script>
+    document.onreadystatechange = function () {
+      if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("#loader").style.visibility = "visible";
+      } else {
+        document.querySelector("#loader").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
+  <script>
+    const autoCompleteJS = new autoComplete({
+      placeHolder: "Enter Your Url",
+      data: {
+        src: ["http://www.", "https://www.", ".com", ".in", ".org", ".me"],
+        cache: true,
+      },
+      resultItem: {
+        highlight: true,
+      },
+      events: {
+        input: {
+          selection: (event) => {
+            const selection = event.detail.selection.value;
+            autoCompleteJS.input.value = selection;
+          },
+        },
+      },
+    });
+  </script>
+
+  <script src="/src/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <script src="https://kit.fontawesome.com/7195b718c9.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
