@@ -8,15 +8,6 @@
     --primary-color:#481FEC;
     --secondary-color: #101014;
 }
-
-body{
-    margin: 0;
-    font-family: 'Netflix Sans', sans-serif;
-    background: #212129;
-    background-repeat: no-repeat;
-    width: 100%;
-    background-size: auto;
-} 
 #Category_title {
     display: flex;
     justify-content: center;
