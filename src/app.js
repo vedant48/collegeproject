@@ -5,8 +5,8 @@
   searchBtn.addEventListener('click', () => {
     const text = document.querySelector('#autoComplete').value
     console.log(text)
-
-    fetch('/results', {
+const serverUrl = process.env.SERVER_URL
+    fetch('serverUrl', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
