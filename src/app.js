@@ -6,7 +6,7 @@
     const text = document.querySelector('#autoComplete').value
     console.log(text)
     
-    let serverUrl = process.env.SERVER_URL || 'https://collegeproject-rust.vercel.app/results' ;
+    let serverUrl = 'https://collegeproject-rust.vercel.app/results' ;
     
     fetch(serverUrl, {
       method: 'POST',
