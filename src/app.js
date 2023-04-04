@@ -6,7 +6,7 @@
     const text = document.querySelector('#autoComplete').value
     console.log(text)
 
-    fetch('http://localhost:8000/results', {
+    fetch('https://collegeproject-rust.vercel.app/results', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
