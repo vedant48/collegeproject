@@ -5,7 +5,7 @@
   searchBtn.addEventListener('click', () => {
     const text = document.querySelector('#autoComplete').value
     console.log(text)
-const serverUrl = process.env.SERVER_URL
+    const serverUrl = process.env.SERVER_URL || 'https://collegeproject-rust.vercel.app/results';
     fetch('serverUrl', {
       method: 'POST',
       headers: {
