@@ -6,7 +6,7 @@
     const text = document.querySelector('#autoComplete').value
     console.log(text)
     
-    let serverUrl = 'https://collegeproject-95z6.vercel.app/results' ;
+    let serverUrl = 'https://vercel-vedant48.vercel.app/results' ;
     
     fetch(serverUrl, {
       method: 'POST',
