@@ -2,9 +2,9 @@
   "name": "productpage",
   "version": "1.0.0",
   "description": "",
-  "main": "scrapper.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node scrapper.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
