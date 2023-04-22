@@ -16,6 +16,8 @@ app.use(cors());
 app.use(
   express.urlencoded({ extended: true })
 );
+
+app.use(express.static('public'));
   
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -127,10 +129,9 @@ async function start(url) {
   return result
 }
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '/index.html'));
+app.get('/', function(request, response){
+    response.sendFile('index.html');
 });
-
 
 app.post('/results', async (req, res) => {
 
