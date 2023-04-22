@@ -71,7 +71,7 @@ async function start(url) {
   for(let item of data){
     console.log("Result for: ", item)
     let subResult = []
-    await page.goto(`https://www.google.com/search?q=good+movies+to+watch+about+${item}&gl=in&hl=en`)
+    await page.goto(`https://www.google.com/search?q=good+movies+to+watch+about+movies+about${item}&gl=in&hl=en`)
     
     const names = await page.evaluate(() => {
       return Array.from(document.querySelectorAll(".oZ5mO")).map(x => x.textContent)
