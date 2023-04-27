@@ -6,9 +6,9 @@
     const text = document.querySelector('#autoComplete').value
     console.log(text)
     
-    let serverUrl = 'https://vercel-vedant48.vercel.app/results' ;
+    let serverUrl = 'https://moviemint.onrender.com/results' ;
     
-    fetch('http://localhost:8000/results', {
+    fetch(serverUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
