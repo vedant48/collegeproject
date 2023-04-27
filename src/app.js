@@ -8,7 +8,7 @@
     
     let serverUrl = 'https://vercel-vedant48.vercel.app/results' ;
     
-    fetch('/results', {
+    fetch('http://localhost:8000/results', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
