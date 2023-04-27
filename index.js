@@ -129,10 +129,6 @@ async function start(url) {
   return result
 }
 
-app.get('/', function(request, response){
-    response.sendFile('index.html');
-});
-
 app.post('/results', async (req, res) => {
 
 const {text} = req.body
